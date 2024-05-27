@@ -42,7 +42,7 @@
 
           <nav class="mx-auto site-navigation">
             <ul class="site-menu js-clone-nav d-none d-xl-block ml-0 pl-0">
-              <li><a href="index.html" class="nav-link active">Home</a></li>
+              <li style="padding-left: 544px;"><a href="index.html" class="nav-link active">Home</a></li>
               <li><a href="about.html">About</a></li>
               
               <li><a href="profile.html">Profile</a></li>
@@ -52,11 +52,11 @@
               
               @guest
                 @if (Route::has('login'))
-              <li class="d-lg-none"><a href="login.html">Log In</a></li>
+              <li class=""><a href="{{ route('login') }}">Log In</a></li>
               @endif
 
               @if (Route::has('register'))
-              <li class="d-lg-none"><a href="regiser.html">Register In</a></li>
+              <li class=""><a href="{{ route('register') }}">Register</a></li>
               @endif
 
               @else
@@ -93,25 +93,25 @@
       </div>
     </header>
 
-    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+    <!-- <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
                     <span class="navbar-toggler-icon"></span>
-                </button>
+                </button> -->
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent"> -->
                     <!-- Left Side Of Navbar -->
-                    <ul class="navbar-nav me-auto">
+                    <!-- <ul class="navbar-nav me-auto"> -->
 
-                    </ul>
+                    <!-- </ul> -->
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ms-auto">
+                    <!-- <ul class="navbar-nav ms-auto"> -->
                         <!-- Authentication Links -->
-                        @guest
+                        <!-- @guest
                             @if (Route::has('login'))
                                 <li class="nav-item">
                                     <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
@@ -145,7 +145,7 @@
                     </ul>
                 </div>
             </div>
-        </nav>
+        </nav> -->
 
         <main class="py-4">
             @yield('content')
@@ -203,7 +203,7 @@
           <div class="col-12">
             <p class="copyright"><small>
               <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>. Downloaded from <a href="https://themeslab.org/" target="_blank">Themeslab</a>
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved</a>
             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></small></p>
           </div>
         </div>
