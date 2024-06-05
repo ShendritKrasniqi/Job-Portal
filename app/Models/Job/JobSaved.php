@@ -9,9 +9,9 @@ class JobSaved extends Model
 {
     use HasFactory;
 
-    protected $tabel = 'jobsaved';
+    protected $table = 'jobsaved';
 
-    protected $fillabel = [
+    protected $fillable = [
 
     'id',
     'job_id', 
