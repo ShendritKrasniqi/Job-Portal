@@ -128,7 +128,7 @@
                   <button type="submit" name="submit" class="btn btn-block btn-primary btn-md">Apply Now</button>
                   @endif
              
-</form>
+              </form>
               </div>
             </div>
 
@@ -156,6 +156,18 @@
                 <a href="https://www.linkedin.com/sharing/share-offsite/?url={{ route('single.job', $job->id)}}" class="pt-3 pb-3 pr-3 pl-0"><span class="icon-linkedin"></span></a>
               </div>
             </div>
+
+
+            <div class="bg-light p-3 border mt-5 rounded mb-4">
+              <h3 class="text-primary  mt-3 h5 pl-3 mb-3 ">Categories</h3>
+              <ul class="list-unstyled pl-3 mb-0">
+               @foreach($categories as $category)
+                <li class="mb-2"><a href="#"> {{ $category->name }} </a></li>
+              @endforeach
+              </ul>
+            </div>
+
+
 
           </div>
         </div>
