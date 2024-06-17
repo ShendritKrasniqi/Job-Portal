@@ -38,6 +38,14 @@ class UsersController extends Controller
 
 
 
+    public function editDetails(){
+
+        $userDetails = User::find(Auth::user()->id);
+
+
+        return view('users.editdetails', compact('userDetails'));
+    }
+
 
 
     
