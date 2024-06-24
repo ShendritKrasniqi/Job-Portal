@@ -14,11 +14,12 @@ use App\Http\Controllers\Jobs\JobsController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
 Auth::routes();
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('welcome');
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/about', [App\Http\Controllers\HomeController::class, 'about'])->name('about');
@@ -28,6 +29,8 @@ Route::group(['prefix' => 'jobs'], function(){
     Route::get('single/{id}' , [App\Http\Controllers\Jobs\JobsController::class, 'single'])->name('single.job');
     Route::post('save' , [App\Http\Controllers\Jobs\JobsController::class, 'saveJob'])->name('save.job');
     Route::post('apply' , [App\Http\Controllers\Jobs\JobsController::class, 'jobApply'])->name('apply.job');
+    Route::any('search' , [App\Http\Controllers\Jobs\JobsController::class, 'search'])->name('search.job');
+
 });
 
 
