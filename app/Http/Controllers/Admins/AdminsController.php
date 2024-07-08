@@ -61,6 +61,14 @@ class AdminsController extends Controller
     
     public function storeAdmins(Request $request){
 
+        Request()->validate([
+            "name" => "required|max:40",
+            "email" => "required|max:40",
+            "pasword" => "required",
+
+        ]);
+
+
         $createAdmins = Admin::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -73,7 +81,13 @@ class AdminsController extends Controller
     }
     
 
+    public function displayCategories(){
+        
+        $categories = Category::all();
 
-    
+
+        return view("admins.display-categories", compact('categories'));
+    }
+
 
 }
