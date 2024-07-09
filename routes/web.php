@@ -67,6 +67,8 @@ Route::post('/create-admins' , [App\Http\Controllers\Admins\AdminsController::cl
 
 Route::get('/display-categories' , [App\Http\Controllers\Admins\AdminsController::class, 'displayCategories'])->name('display.categories');
 
+Route::get('/create-cates' , [App\Http\Controllers\Admins\AdminsController::class, 'createCategories'])->name('create.categories');
+Route::post('/create-cates' , [App\Http\Controllers\Admins\AdminsController::class, 'storeCategories'])->name('store.categories');
 
 
 
