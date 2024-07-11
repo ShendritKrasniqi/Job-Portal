@@ -75,6 +75,7 @@ Route::get('/edit-cates/{id}' , [App\Http\Controllers\Admins\AdminsController::c
 Route::post('/edit-cates/{id}' , [App\Http\Controllers\Admins\AdminsController::class, 'updateCategories'])->name('update.categories');
 
 
+Route::get('/delete-cates/{id}' , [App\Http\Controllers\Admins\AdminsController::class, 'deleteCategories'])->name('delete.categories');
 
 
 });
