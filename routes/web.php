@@ -74,8 +74,10 @@ Route::post('/create-cates' , [App\Http\Controllers\Admins\AdminsController::cla
 Route::get('/edit-cates/{id}' , [App\Http\Controllers\Admins\AdminsController::class, 'editCategories'])->name('edit.categories');
 Route::post('/edit-cates/{id}' , [App\Http\Controllers\Admins\AdminsController::class, 'updateCategories'])->name('update.categories');
 
-
 Route::get('/delete-cates/{id}' , [App\Http\Controllers\Admins\AdminsController::class, 'deleteCategories'])->name('delete.categories');
+
+//jobs 
+Route::get('/display-jobs' , [App\Http\Controllers\Admins\AdminsController::class, 'allJobs'])->name('display.jobs');
 
 
 });

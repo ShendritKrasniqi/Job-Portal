@@ -154,5 +154,14 @@ public function deleteCategories($id){
     }
 }
 
+//jobs
+    public function allJobs(){
+            
+        $jobs = Job::all();
+
+        return view('admins.all-jobs', compact('jobs'));
+
+    }
+
  
 }
