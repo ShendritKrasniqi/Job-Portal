@@ -81,6 +81,7 @@ Route::get('/display-jobs' , [App\Http\Controllers\Admins\AdminsController::clas
 Route::get('/create-jobs' , [App\Http\Controllers\Admins\AdminsController::class, 'createJobs'])->name('create.jobs');
 Route::post('/create-jobs' , [App\Http\Controllers\Admins\AdminsController::class, 'storeJobs'])->name('store.jobs');
 
+Route::get('/delete-jobs/{id}' , [App\Http\Controllers\Admins\AdminsController::class, 'deleteJobs'])->name('delete.jobs');
 
 
 });
