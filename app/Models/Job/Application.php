@@ -17,6 +17,7 @@ class Application extends Model
     'id',
     'cv', 
     'job_id',
+    'email',
     'user_id',
     'job_image',
     'job_title',

@@ -253,7 +253,15 @@ public function deleteCategories($id){
 
     }
 
+    //apps
+
+    public function displayApps(){
+            
+        
+        $apps = Application::all();
+
+        return view('admins.all-apps', compact('apps'));
+    }
+
     
-
-
 }
