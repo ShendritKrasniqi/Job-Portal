@@ -263,5 +263,19 @@ public function deleteCategories($id){
         return view('admins.all-apps', compact('apps'));
     }
 
+
+    public function deleteApps($id){
+            
+        
+        $deleteApp = Application::find($id);
+
+        $deleteApp->delete();
+
+        if( $deleteApp){
+            return redirect('admin/display-apps/')->with('delete', 'Application Deleted successfully');
+        }
+
+    }
+
     
 }
