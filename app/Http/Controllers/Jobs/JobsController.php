@@ -10,6 +10,7 @@ use App\Models\Job\Application;
 use App\Models\Category\Category;
 use App\Models\Job\Search;
 use Auth;
+use DB;
 
 
 
@@ -31,7 +32,11 @@ class JobsController extends Controller
         ->take(5)
         ->count();
         
-        $categories = Category::all();
+        $categories = DB::table('categories')
+        ->join('jobs', 'jobs.category', '=', 'categories.name')
+        ->select('categories.name AS name', 'categories.id AS id', DB::raw('COUNT(jobs.category) AS total'))
+        ->groupBy('jobs.category')
+        ->get();
 
         //save job
         if(auth()->user()){
