@@ -9,6 +9,7 @@ use App\Models\Job\Job;
 use App\Models\Category\Category;
 use App\Models\Job\Application;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Auth;
 use File;
 
 
@@ -33,6 +34,8 @@ class AdminsController extends Controller
         
     }
 
+    
+    
     public function index(){
 
         $jobs = Job::select()->count();
@@ -60,27 +63,26 @@ class AdminsController extends Controller
     }
 
     
-    public function storeAdmins(Request $request){
-
-        Request()->validate([
+    public function storeAdmins(Request $request) {
+       
+        $request->validate([
             "name" => "required|max:40",
-            "email" => "required|max:40",
-            "pasword" => "required",
-
+            "email" => "required|max:40|email|unique:admins,email", 
+            "password" => "required",
         ]);
-
-
+    
         $createAdmins = Admin::create([
             'name' => $request->name,
             'email' => $request->email,
-            'password' => Hash::make($request->password,),
+            'password' => Hash::make($request->password), 
         ]);
-
-        if( $createAdmins){
-            return redirect('admin/all-admin/')->with('create', 'Admin creted successfully');
-        }
-    }
     
+        if ($createAdmins) {
+            return redirect()->route('view.admins')->with('create', 'Admin created successfully'); 
+        }
+    
+        return back()->with('error', 'Failed to create admin');
+    }
 
     public function displayCategories(){
         
