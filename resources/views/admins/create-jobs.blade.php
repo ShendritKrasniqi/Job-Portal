@@ -106,7 +106,7 @@
   
                 <div class="form-group">
                   <label for="job-location">Application Deadline</label>
-                  <input name="application_deadline" type="text" class="form-control" id="" placeholder="e.g. 20-12-2022">
+                  <input name="application_deadline" type="date" class="form-control" placeholder="YYYY-MM-DD">
                 </div>
                 @if($errors->has('application_deadline'))
                 <p class="alert alert-danger">{{ $errors->first('application_deadline') }}</p>

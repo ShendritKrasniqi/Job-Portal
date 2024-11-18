@@ -21,7 +21,7 @@ class CreateJobsTable extends Migration
             $table->string('job_type');
             $table->integer('vacancy')->nullable(); // Assuming it can be null
             $table->string('experience')->nullable();
-            $table->decimal('salary', 10, 2)->nullable(); // Assuming salary can be decimal
+            $table->string('salary')->nullable(); // Assuming salary can be decimal
             $table->string('gender')->nullable();
             $table->date('application_deadline')->nullable();
             $table->text('jobdescription')->nullable();

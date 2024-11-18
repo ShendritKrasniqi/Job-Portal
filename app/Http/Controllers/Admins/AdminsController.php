@@ -180,9 +180,8 @@ public function deleteCategories($id){
 
     
 
-    public function storeJobs(Request $request){
-
-        Request()->validate([
+    public function storeJobs(Request $request) {
+        $request->validate([
             "job_title" => "required|max:40",
             "job_region" => "required|max:40",
             "company" => "required",
@@ -191,23 +190,24 @@ public function deleteCategories($id){
             "experience" => "required",
             "salary" => "required",
             "gender" => "required",
-            "application_deadline" => "required",
+            "application_deadline" => "required|date",  // Ensuring it's a date format
             "jobdescription" => "required",
             "responsibilities" => "required",
             "education_experience" => "required",
             "otherbenifits" => "required",
             "category" => "required",
-            "image" => "image",
-
+            "image" => "image|nullable", // Allowing image to be nullable
         ]);
-
-
-
-        $destinationPath = 'assets/images/';
-        $myimage = $request->image->getClientOriginalName();
-        $request->image->move(public_path($destinationPath), $myimage);
-
-        
+    
+        // Initialize variables for fields
+        $myimage = null;
+        if ($request->hasFile('image')) {
+            $destinationPath = 'assets/images/';
+            $myimage = $request->image->getClientOriginalName();
+            $request->image->move(public_path($destinationPath), $myimage);
+        }
+    
+        // Creating job record
         $createJobs = Job::create([
             'job_title' => $request->job_title,
             'job_region' => $request->job_region,
@@ -223,13 +223,13 @@ public function deleteCategories($id){
             'education_experience' => $request->education_experience,
             'otherbenifits' => $request->otherbenifits,
             'category' => $request->category,
-            'image' => $myimage,
-
-
+            'image' => $myimage,  // Saving image name only if exists
         ]);
-
-        if( $createJobs){
-            return redirect('admin/display-jobs/')->with('create', 'Job creted successfully');
+    
+        if ($createJobs) {
+            return redirect('admin/display-jobs/')->with('create', 'Job created successfully');
+        } else {
+            return back()->with('error', 'Failed to create job');
         }
     }
     

@@ -152,7 +152,7 @@
                 <li class="mb-2"><strong class="text-black">Experience:</strong> {{ $job->experience }}</li>
                 <li class="mb-2"><strong class="text-black">Job Location:</strong> {{ $job->job_region }}</li>
                 <li class="mb-2"><strong class="text-black">Salary:</strong> {{ $job->salary }}</li>
-                <li class="mb-2"><strong class="text-black">Gender:</strong> {{ $job->Gender }}</li>
+                <li class="mb-2"><strong class="text-black">Gender:</strong> {{ $job->gender }}</li>
                 <li class="mb-2"><strong class="text-black">Application Deadline:</strong> {{ $job->application_deadline }}</li>
               </ul>
             </div>
