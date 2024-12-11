@@ -102,9 +102,10 @@
                         <h3 class="card-title">Shendrit Krasniqi</h3>
                         <p class="text-muted">Fullstack Developer</p>
                         <p class="card-text">I am a passionate and motivated fullstack developer with experience in creating efficient and scalable web applications. I enjoy solving complex problems and delivering user-friendly solutions while continuously learning and adopting new technologies. For more information, feel free to check out my GitHub and LinkedIn profiles below.</p>
-                        <div class="social mt-4">
+                        <div class="about-social-icon mt-4">
                             <a href="https://www.linkedin.com/in/shendrit-krasniqi-a668b8214/" target="_blank" class="mx-2"><span class="icon-linkedin"></span></a>
                             <a href="https://github.com/shendritkrasniqi" target="_blank" class="mx-2"><span class="icon-github"></span></a>
+                            <a href="https://shendritkrasniqi.com" target="_blank" class="mx-2"><span class="bi bi-globe2"></span></a>
                         </div>
                     </div>
                 </div>
