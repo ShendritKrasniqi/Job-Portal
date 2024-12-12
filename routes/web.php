@@ -41,6 +41,8 @@ Route::group(['prefix' => 'users'], function() {
 // Admin login routes
 Route::get('admin/login', [App\Http\Controllers\Admins\AdminsController::class, 'viewLogin'])->name('view.login')->middleware('checkforauth');
 Route::post('admin/login', [App\Http\Controllers\Admins\AdminsController::class, 'checkLogin'])->name('check.login');
+Route::post('admin/logout', [App\Http\Controllers\Admins\AdminsController::class, 'logout'])->name('admin.logout');
+
 
 // Admin routes (protected by auth:admin middleware)
 Route::group(['prefix' => 'admin', 'middleware' => 'auth:admin'], function() {

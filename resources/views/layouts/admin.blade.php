@@ -50,20 +50,16 @@
                     </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        {{ Auth::guard('admin')->user()->name }}
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="{{ route('logout') }}"
-                           onclick="event.preventDefault();
-                           document.getElementById('logout-form').submit();">
-                            Logout
-                        </a>
-                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                            @csrf
-                        </form>
-                    </div>
-                </li>
+    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        {{ Auth::guard('admin')->user()->name }}
+    </a>
+    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+        <form id="logout-form" action="{{ route('admin.logout') }}" method="POST" class="d-inline">
+            @csrf
+            <button type="submit" class="dropdown-item">Logout</button>
+        </form>
+    </div>
+</li>
                 @else
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('view.login') ? 'text-white' : '' }}" href="{{ route('view.login') }}">login

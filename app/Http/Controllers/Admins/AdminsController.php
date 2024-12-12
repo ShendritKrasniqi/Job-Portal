@@ -279,5 +279,12 @@ public function deleteCategories($id){
 
     }
 
+    public function logout()
+{
+    Auth::guard('admin')->logout(); // Log out the admin user
+    return redirect()->route('view.login'); // Redirect to the admin login page
+}
+
+
     
 }
