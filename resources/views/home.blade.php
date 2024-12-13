@@ -21,7 +21,7 @@
     </div>
 </div> -->
 
-<section class="home-section section-hero overlay bg-image" style="margin-top: -24px; background-image: url({{ asset('assets/images/hero_1.jpg')}});" id="home-section">
+<section class="home-section section-hero overlay bg-image" style="background-image: url({{ asset('assets/images/hero_1.jpg')}});" id="home-section">
 <div class="container">
   <div class="row align-items-center justify-content-center">
     <div class="col-md-12">

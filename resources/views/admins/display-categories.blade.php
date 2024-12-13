@@ -28,14 +28,14 @@
 
 
               <h5 class="card-title mb-4 d-inline">Categories</h5>
-             <a  href="{{ route('create.categories')}}" class="btn btn-primary mb-4 text-center float-right">Create Categories</a>
+             <a  href="{{ route('create.categories')}}" class="btn btn-primary mb-4 text-center float-right"><i class="bi bi-plus-circle-dotted"></i> Create Categories</a>
               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">update</th>
-                    <th scope="col">delete</th>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Update</th>
+                    <th scope="col">Delete</th>
                   </tr>
                 </thead>
                 <tbody>

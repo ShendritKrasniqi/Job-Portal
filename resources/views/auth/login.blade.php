@@ -20,8 +20,7 @@
     <div class="row justify-content-center">
         <div class="col-md-12">
 
-            <form style="margin-top:35px" action="{{ route('login') }}" method="POST" class="p-4 border rounded">
-                @csrf <!-- Use @csrf instead of @CSRF -->
+        <form style="margin-top:35px" action="{{ route('login') }}" method="POST" class="p-4 border rounded">                @csrf <!-- Use @csrf instead of @CSRF -->
 
                 <div class="row form-group">
                     <div class="col-md-12 mb-3 mb-md-0">

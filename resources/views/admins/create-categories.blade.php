@@ -13,7 +13,7 @@
                  @csrf
                  
                 <div class="form-outline mb-4 mt-4">
-                  <input type="text" name="name" id="form2Example1" class="form-control" placeholder="name" />
+                  <input type="text" name="name" id="form2Example1" class="form-control" placeholder="Name of Category" />
                  
                 </div>
                 @if($errors->has('name'))
@@ -22,7 +22,7 @@
 
       
                 <!-- Submit button -->
-                <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">create</button>
+                <button type="submit" name="submit" class="btn btn-primary  mb-4 text-center">Create</button>
 
           
               </form>

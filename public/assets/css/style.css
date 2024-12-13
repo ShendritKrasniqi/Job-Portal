@@ -833,9 +833,14 @@ h1, h2, h3, h4 {
   font-size: 1rem;
   color: #ced4da; }
 
+.section-hero{
+    margin-top: -24px;
+  }
+  
 .section-hero, .section-hero > .container > .row {
   height: 100vh;
-  min-height: 900px; }
+  min-height: 900px; 
+  }
 
 .section-hero.inner-page, .section-hero.inner-page > .container > .row {
   height: auto;

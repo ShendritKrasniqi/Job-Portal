@@ -67,7 +67,11 @@
             <li>
                 <a href="{{ route('register') }}" class="nav-link {{ request()->is('register') ? 'active' : '' }}">Register</a>
             </li>
-            @endif
+            @endif  
+            <li>
+                <a href="{{ route('view.login') }}" class="nav-link {{ request()->is('view.login') ? 'active' : '' }}">Administrator</a>
+            </li>
+            
         @else
         <li class="nav-item dropdown">
             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
@@ -101,6 +105,9 @@
             </div>
         </li>
         @endguest
+
+
+
     </ul>
 </nav>
           

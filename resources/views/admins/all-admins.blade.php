@@ -14,13 +14,13 @@
             @endif  
 
               <h5 class="card-title mb-4 d-inline">Admins</h5>
-             <a  href="{{ route ('create.admins')}}" class="btn btn-primary mb-4 text-center float-right">Create Admins</a>
-              <table class="table">
+              <a href="{{ route('create.admins') }}" class="btn btn-primary mb-4 text-center float-right"><i class="fas fa-user-plus"></i>  Create Admins</a>
+               <table class="table">
                 <thead>
                   <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">name</th>
-                    <th scope="col">email</th>
+                    <th scope="col"></th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
                   </tr>
                 </thead>
                 <tbody>

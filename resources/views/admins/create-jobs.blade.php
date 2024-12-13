@@ -169,7 +169,7 @@
                 @endif
 
                 <div class="form-group">
-                    <label for="job-location">Images</label>
+                    <label for="job-location">Upload Business Logo</label>
                     <input name="image" type="file" class="form-control">
                 </div>
                 @if($errors->has('image'))
@@ -179,7 +179,7 @@
                 <div class="col-lg-4 ml-auto">
                     <div class="row">  
                       <div class="col-6">
-                        <input type="submit" name="submit" class="btn btn-block btn-primary btn-md" style="margin-left: 200px;" value="Save Job">
+                        <input type="submit" name="submit" class="btn btn-block btn-primary btn-md" style="margin-left: 200px;" value="Create Job">
                       </div>
                     </div>
                 </div>

@@ -5,6 +5,8 @@
     <title>Admin Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
     <link href="{{ asset('assets/styles/style.css') }}" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
@@ -13,7 +15,7 @@
 <div id="wrapper">
     <nav class="navbar header-top fixed-top navbar-expand-lg navbar-dark bg-dark">
       <div class="container">
-        <a class="navbar-brand" href="#">LOGO</a>
+      <a class="navbar-brand" href="{{ auth()->check() ? route('admins.dashboard') : url()->current() }}">Administrator</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarText" aria-controls="navbarText"
                 aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -45,7 +47,6 @@
             <ul class="navbar-nav ml-md-auto d-md-flex">
                 @auth('admin')
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('admins.dashboard') ? 'text-white' : '' }}" href="{{ route('admins.dashboard') }}">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -62,7 +63,7 @@
 </li>
                 @else
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('view.login') ? 'text-white' : '' }}" href="{{ route('view.login') }}">login
+                    <a class="nav-link {{ request()->routeIs('home') ? 'text-white' : '' }}" href="{{ route('home') }}">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
